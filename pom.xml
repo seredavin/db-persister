@@ -82,7 +82,7 @@
                         </platforms>
                     </from>
                     <to>
-                        <image>docker.io/seredavin/git-license-parser</image>
+                        <image>docker.io/seredavin/db-persister</image>
                     </to>
                 </configuration>
             </plugin>
