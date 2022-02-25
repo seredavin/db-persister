@@ -4,9 +4,9 @@ git-license-parser:
 spring:
   data:
     mongodb:
-      host: localhost
+      host: ${mongo-host:localhost}
       port: 27017
-      database: mongo
+      database: ${mongo-database:mongo}
   kafka:
     bootstrap-servers: ${kafka_bootstrap_servers:192.168.88.73:9093}
     properties:
