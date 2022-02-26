@@ -7,11 +7,12 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 @Service
 @Slf4j
 public class EmitterService {
-    List<SseEmitter> emitters = new ArrayList<>();
+    List<SseEmitter> emitters = new CopyOnWriteArrayList<>();
 
     public void addEmitter(SseEmitter emitter) {
         emitter.onCompletion(() -> emitters.remove(emitter));
