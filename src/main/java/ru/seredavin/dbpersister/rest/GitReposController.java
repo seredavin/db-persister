@@ -4,19 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.codec.ServerSentEvent;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import ru.seredavin.dbpersister.dto.GitReposDTO;
 import ru.seredavin.dbpersister.service.GitReposService;
 import ru.seredavin.dbpersister.service.impl.EmitterService;
 
-import javax.servlet.http.HttpServletResponse;
-import java.time.Duration;
-import java.time.LocalTime;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @RestController
 @AllArgsConstructor
